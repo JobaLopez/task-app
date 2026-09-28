@@ -22,6 +22,15 @@ para asegurarnos de que podremos ejecutar el proyecto.
 - Después debemos pasar el valor de los nombres al componente dentro del bucle `@for`.
 - Para saber más sobre los conceptos básicos de Angular puedes utilizar [la documentación oficial](https://angular.dev/overview) y hacer los [casos prácticos que proponen](https://angular.dev/tutorials/learn-angular).
 
+## Routing
+Se ha añadido routing a la aplicación. Como se trata de una aplicaciñon con SSR hay que trabajar un poco más que si no lo fuera ya que tenemos que configurar las rutas tanto para el cliente como para el servidor:
+- Tenemos el archivo ```app.routes.ts``` y ```app.server.routes.ts``` para la declaración de rutas. En este caso en las rutas del servidor se le indica que tiene que renderizar siempre en el cliente.
+- Después tenemos ```app.config.ts``` y ```app.config.server.ts``` para aplicar las configuraciones necesarias como el uso de ```withComponentInputBinding()``` para que las rutas obtengan un parametro de la URL directamente.
+- Para hacer que todo funcione también ha habido que mezclar las configuraciones locales y del servidor en una única en ```main.server.ts```.
+- Por último, se han añadido etiquetas ```<a>``` con la propiedad ```routerLink``` para enlazar las páginas.
+- Se han creado componentes nuevos para hacer más claro el funcionamiento.
+- Documentación interesante [sobre routing en angular](https://angular.dev/guide/routing), [```routerLink```](https://angular.dev/api/router/RouterLink#href) y [```withComponentInputBinding()```](https://angular.dev/api/router/withComponentInputBinding).
+
 ## Servidor de desarrollo
 
 Para ejecutar el proyecto en local introduce este comando en la terminal de tu ordenador. tienes que encontrarte en el directoriao del proyecto:
