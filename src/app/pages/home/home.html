@@ -1,0 +1,5 @@
+@for (task of taskList(); track task.name) {
+  <app-task [task]="task" (checkboxValue)="updateTaskValue($event)" />
+}
+
+<button (click)="consolePrint()">Consola</button>
