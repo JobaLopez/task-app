@@ -1,6 +1,6 @@
 import { Component, signal } from '@angular/core';
-import { Task } from '../../task/task';
 import { RouterLink } from '@angular/router';
+import { Task } from './components/task/task';
 
 export interface TaskInterface {
   id: number;

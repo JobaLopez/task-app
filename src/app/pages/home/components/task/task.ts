@@ -1,5 +1,6 @@
 import { Component, input, output } from '@angular/core';
-import { TaskInterface } from '../pages/home/home';
+import { TaskInterface } from '../../home';
+
 
 @Component({
   imports: [],
