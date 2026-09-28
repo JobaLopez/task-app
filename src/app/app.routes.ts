@@ -8,7 +8,7 @@ export const appRoutes: Routes = [
         component: Home
     },
     {
-        path: 'task',
+        path: 'task/:id',
         component: TaskDetail,
     }
 ];

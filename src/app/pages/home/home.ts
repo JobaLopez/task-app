@@ -1,5 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { Task } from '../../task/task';
+import { RouterLink } from '@angular/router';
 
 export interface TaskInterface {
   id: number;
@@ -37,7 +38,7 @@ export const taskArray: TaskInterface[] = [
 
 @Component({
   selector: 'app-home',
-  imports: [Task],
+  imports: [Task, RouterLink],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
