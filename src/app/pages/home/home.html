@@ -1,0 +1,10 @@
+<div style="display: flex; flex-direction: column; gap: 4px; max-width: 650px; margin-bottom: 12px;">
+  @for (task of taskList(); track task.name) {
+    <app-task [task]="task" (checkboxValue)="updateTaskValue($event)" />
+  }
+</div>
+
+<div style="display: flex; gap: 6px;">
+  <button (click)="consolePrint()">Consola</button>
+  <a style="padding: 8px 12px; background-color: aqua; border-radius: 10px; text-decoration: none;" routerLink="/task/3">Ir a task 3</a>
+</div>
